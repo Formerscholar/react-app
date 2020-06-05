@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import './login.css'
+import './login.less'
 import logo from '../../asstes/images/logo.png'
-
 class Login extends Component {
   render() {
     return (
