@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
+import { Layout } from 'antd'
 
 import memoryUtils from '../../utils/memoryUtils'
+import LeftNav from '../../components/LeftNav'
+import MyHeader from '../../components/Header'
+
+const { Footer, Sider, Content } = Layout
 
 class Admin extends Component {
   render() {
@@ -10,7 +15,20 @@ class Admin extends Component {
       return <Redirect to="/login" />
     }
 
-    return <div>Hello {user.username}</div>
+    return (
+      <Layout style={{ height: '100%' }}>
+        <Sider>
+          <LeftNav />
+        </Sider>
+        <Layout>
+          <MyHeader>Header</MyHeader>
+          <Content style={{ backgroundColor: '#fff' }}>Content</Content>
+          <Footer style={{ textAlign: 'center', color: '#ccc' }}>
+            chad.com
+          </Footer>
+        </Layout>
+      </Layout>
+    )
   }
 }
 
