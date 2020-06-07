@@ -10,8 +10,8 @@ export default class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route path="/login" component={Login}></Route>
-          <Route path="/home" component={Admin}></Route>
-          <Redirect to="/home" />
+          <Route path="/" component={Admin}></Route>
+          <Redirect to="/" />
         </Switch>
       </BrowserRouter>
     )

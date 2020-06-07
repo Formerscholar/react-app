@@ -1,5 +1,7 @@
 import { request } from './request'
+import jsonp from 'jsonp'
 import Qs from 'qs'
+import { message } from 'antd'
 
 export function getLogin(data) {
   return request({
